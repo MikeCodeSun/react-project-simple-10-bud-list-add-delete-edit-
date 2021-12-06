@@ -5,3 +5,111 @@
   margin: 0;
   padding: 0;
 }
+/* css varible */
+:root {
+  --gray-50: #f9fafb;
+  --gray-300: #d1d5db;
+
+  --transition: 0.6s ease-in-out all;
+  --backgroundColor: var(--gray-50);
+  --letterSpace: 1px;
+  --borderRadius: 5px;
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --red-light: #fef2f2;
+  --red-dark: #7f1d1d;
+  --green-light: #ecfdf5;
+  --green-dark: #064e3b;
+
+  --primary-200: #bfdbfe;
+  --primary-500: #3b82f6;
+  --primary-700: #1d4ed8;
+}
+
+/* main  */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundColor);
+  text-align: center;
+}
+
+/* section */
+.section-center {
+  width: 40vw;
+  max-width: 600px;
+  min-height: 40vh;
+  background-color: white;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-1);
+}
+
+/* btn */
+
+.btn {
+  color: white;
+  background-color: var(--primary-500);
+  border-color: transparent;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--borderRadius);
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpace);
+  transition: var(--transition);
+  box-shadow: var(--shadow-1);
+}
+
+.btn:hover {
+  color: var(--primary-700);
+  background-color: var(--primary-200);
+  box-shadow: var(--shadow-2);
+}
+
+.form h3 {
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+.form-input {
+  padding: 0.3rem 0.6rem;
+  background-color: var(--backgroundColor);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--borderRadius);
+  /* margin-right: 0.5rem; */
+}
+
+/* list container  */
+.list-container {
+  margin-top: 1rem;
+}
+
+.list {
+  margin-bottom: 2rem;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0.7rem;
+}
+/* alert */
+.alert {
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpace);
+  padding: 0.3rem 0.6rem;
+  margin: 1rem 0;
+}
+
+.alert-danger {
+  background-color: var(--red-light);
+  color: var(--red-dark);
+}
+
+.alert-success {
+  background-color: var(--green-light);
+  color: var(--green-dark);
+}
+/* specail btn  */

@@ -77,7 +77,7 @@ function App() {
   return (
     <main>
       <section className="section-center">
-        {alert.show && <Alert alert={alert} />}
+        {alert.show && <Alert alert={alert} showAlert={showAlert} />}
         <form onSubmit={handleSubmit} className="form">
           <h3>bud</h3>
           <div className="form-control">
@@ -87,7 +87,7 @@ function App() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <button className="submit-btn" type="submit">
+            <button className="submit-btn btn" type="submit">
               {isEditing ? "edit" : "submit"}
             </button>
           </div>
@@ -96,11 +96,11 @@ function App() {
           {list.length > 0 && (
             <div className="list">
               <List list={list} deleteItem={deleteItem} editItem={editItem} />
-              <button className="btn btn-clear" onClick={() => cleatItems()}>
-                clear all
-              </button>
             </div>
           )}
+          <button className="btn btn-clear" onClick={() => cleatItems()}>
+            clear all
+          </button>
         </div>
       </section>
     </main>
